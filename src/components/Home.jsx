@@ -136,7 +136,7 @@ const Home = () => {
       <Divider />
       <div style={{ display: 'flex', justifyContent: 'space-between', margin: '20px' }}>
         {cards.map((card, index) => (
-          <Card key={index} sx={{ width: card.size, minWidth: '200px' }}>
+          <Card key={index} sx={{ width: card.size, minWidth: '200px', display: 'flex', flexDirection: 'column' }}>
             <CardContent>
               <Typography variant="h5" component="div" sx={{ marginBottom: '10px' }}>
                 {card.heading}
@@ -145,7 +145,7 @@ const Home = () => {
                 {card.description}
               </Typography>
             </CardContent>
-            <CardActions sx={{ marginTop: 'auto' }}>
+            <CardActions sx={{ mt: 'auto' }}>
               <Button
                 size="small"
                 fullWidth
@@ -160,10 +160,10 @@ const Home = () => {
                 {card.button}
               </Button>
             </CardActions>
-
           </Card>
         ))}
       </div>
+
     </div>
   );
 };

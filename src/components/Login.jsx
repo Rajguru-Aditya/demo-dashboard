@@ -26,7 +26,7 @@ export default function SignInSide() {
     });
 
     // Redirect to home page
-    navigate('/home');
+    navigate('/dashboard');
   };
 
   return (
