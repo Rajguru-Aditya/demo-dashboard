@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NestedSubitem1 = () => {
+const Product = () => {
   return (
     <div>
       <h1>Nested Subitem 1 Page</h1>
@@ -9,4 +9,4 @@ const NestedSubitem1 = () => {
   );
 };
 
-export default NestedSubitem1;
+export default Product;

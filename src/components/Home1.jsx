@@ -1,4 +1,3 @@
-// Home1.js
 import React from 'react';
 import { Card, Elevation, Button } from '@blueprintjs/core';
 import '@blueprintjs/core/lib/css/blueprint.css';

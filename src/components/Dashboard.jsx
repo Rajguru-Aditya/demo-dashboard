@@ -35,10 +35,10 @@ const Nav = () => {
 
   const masterSubMenu = [
     {
-      text: 'Nested Item 1',
+      text: 'Inventory',
       onClick: () => console.log('Nested Item 1 clicked'),
       submenu: [
-        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Product', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/product' },
         { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
       ],
     },
@@ -50,7 +50,7 @@ const Nav = () => {
       text: 'Nested Item 1',
       onClick: () => console.log('Nested Item 1 clicked'),
       submenu: [
-        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-2' },
         { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
       ],
     },
@@ -155,7 +155,7 @@ const Nav = () => {
       ))}
     </Menu>
   );
-
+  
   const renderNestedMenu = (nestedItems, submenuPath) => (
     <Menu>
       {nestedItems.map((item) => (
@@ -176,6 +176,7 @@ const Nav = () => {
       </Button>
     </Popover>
   );
+
 
   const buttonsData = [
     { text: 'Master', icon: 'home', submenu: masterSubMenu, to: '/master' },
@@ -210,7 +211,7 @@ const Nav = () => {
         )}
       </Navbar.Group>
     </Navbar>
-    <Home1/>s
+    <Home1/>
     </>
   );
 };

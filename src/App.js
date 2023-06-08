@@ -3,7 +3,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
-import NestedSubitem1 from './components/NestedSubitem1';
+import Product from './pages/master/inventory/Product';
 
 const App = () => {
   return (
@@ -11,7 +11,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/nested-subitem-1" element={<NestedSubitem1 />} /> 
+        {/* Master */}
+        {/* Inventory */}
+        <Route path="/product" element={<Product />} /> 
       </Routes>
     </div>
   );
