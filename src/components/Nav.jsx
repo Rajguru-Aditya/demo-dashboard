@@ -3,7 +3,7 @@ import { Navbar, Alignment, Button, Classes, Icon, Popover, Menu, MenuItem } fro
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-import Home1 from './Home1'
+// import Home1 from './Home1'
 
 const Nav = () => {
   const navbarStyle = {
@@ -219,7 +219,7 @@ const Nav = () => {
         )}
       </Navbar.Group>
     </Navbar>
-    <Home1 />
+    {/* <Home1 /> */}
     </>
   );
 };

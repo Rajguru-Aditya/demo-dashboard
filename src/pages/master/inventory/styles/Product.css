@@ -116,7 +116,6 @@ h4.prodName {
     display: flex;
     align-items: flex-start;
     margin-top: auto;
-    margin-bottom: auto;
     /* Moves the footer to the bottom */
 }
 
@@ -129,7 +128,6 @@ h4.prodName {
     margin-right: 0;
 }
 
-
 .other-detail-table tbody tr,
 .price-detail-table tbody tr,
 .tax-detail-table tbody tr,
@@ -139,6 +137,6 @@ h4.prodName {
 .product-table tbody tr,
 .product-table tbody td,
 .product-table thead th {
-    height: 20px;
+    height: 6px;
     padding: 0;
 }
