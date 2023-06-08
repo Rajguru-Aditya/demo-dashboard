@@ -45,6 +45,90 @@ const Nav = () => {
     { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
     { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
   ];
+  const marketingSubMenu = [
+    {
+      text: 'Nested Item 1',
+      onClick: () => console.log('Nested Item 1 clicked'),
+      submenu: [
+        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
+      ],
+    },
+    { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
+    { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
+  ];
+  const transactionSubMenu = [
+    {
+      text: 'Nested Item 1',
+      onClick: () => console.log('Nested Item 1 clicked'),
+      submenu: [
+        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
+      ],
+    },
+    { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
+    { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
+  ];
+  const accountSubMenu = [
+    {
+      text: 'Nested Item 1',
+      onClick: () => console.log('Nested Item 1 clicked'),
+      submenu: [
+        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
+      ],
+    },
+    { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
+    { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
+  ];
+  const supportSubMenu = [
+    {
+      text: 'Nested Item 1',
+      onClick: () => console.log('Nested Item 1 clicked'),
+      submenu: [
+        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
+      ],
+    },
+    { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
+    { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
+  ];
+  const reportSubMenu = [
+    {
+      text: 'Nested Item 1',
+      onClick: () => console.log('Nested Item 1 clicked'),
+      submenu: [
+        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
+      ],
+    },
+    { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
+    { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
+  ];
+  const webappSubMenu = [
+    {
+      text: 'Nested Item 1',
+      onClick: () => console.log('Nested Item 1 clicked'),
+      submenu: [
+        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
+      ],
+    },
+    { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
+    { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
+  ];
+  const settingSubMenu = [
+    {
+      text: 'Nested Item 1',
+      onClick: () => console.log('Nested Item 1 clicked'),
+      submenu: [
+        { text: 'Nested Subitem 1', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/nested-subitem-1' },
+        { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
+      ],
+    },
+    { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
+    { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
+  ];
 
   const navigate = useNavigate();
 
@@ -87,13 +171,13 @@ const Nav = () => {
 
   const buttonsData = [
     { text: 'Master', icon: 'home', submenu: masterSubMenu },
-    { text: 'Marketing', icon: 'globe', submenu: masterSubMenu },
-    { text: 'Transaction', icon: 'credit-card', submenu: masterSubMenu },
-    { text: 'Account', icon: 'person', submenu: masterSubMenu },
-    { text: 'Support', icon: 'cog', submenu: masterSubMenu },
-    { text: 'Report', icon: 'chart', submenu: masterSubMenu },
-    { text: 'WebApp', icon: 'grid-view', submenu: masterSubMenu },
-    { text: 'Settings', icon: 'cog', submenu: masterSubMenu },
+    { text: 'Marketing', icon: 'globe', submenu: marketingSubMenu },
+    { text: 'Transaction', icon: 'credit-card', submenu: transactionSubMenu },
+    { text: 'Account', icon: 'person', submenu: accountSubMenu },
+    { text: 'Support', icon: 'lifesaver', submenu: supportSubMenu },
+    { text: 'Report', icon: 'chart', submenu: reportSubMenu },
+    { text: 'WebApp', icon: 'grid-view', submenu: webappSubMenu },
+    { text: 'Settings', icon: 'cog', submenu: settingSubMenu },
   ];
 
   return (
