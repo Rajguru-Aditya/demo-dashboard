@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { Navbar, Alignment, Button, Classes, Icon, Popover, Menu, MenuItem } from '@blueprintjs/core';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-import Home1 from './Home1';
 
 const Nav = () => {
   const navbarStyle = {
@@ -132,6 +131,7 @@ const Nav = () => {
 
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [submenuPath, setSubmenuPath] = React.useState('');
 
@@ -189,6 +189,13 @@ const Nav = () => {
     { text: 'Settings', icon: 'cog', submenu: settingSubMenu, to: '/setting' },
   ];
 
+  const isLoginPage = location.pathname === '/';
+
+  // Render the navbar only if it's not the login page
+  if (isLoginPage) {
+    return null;
+  }
+
   return (
     <>
     <Navbar fixedToTop className={`${Classes.DARK} ${Classes.SMALL}`} style={navbarStyle}>
@@ -211,7 +218,6 @@ const Nav = () => {
         )}
       </Navbar.Group>
     </Navbar>
-    <Home1/>
     </>
   );
 };
