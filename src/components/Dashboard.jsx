@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navbar, Alignment, Button, Classes, Icon, Popover, Menu, MenuItem } from '@blueprintjs/core';
 import { Link, useNavigate } from 'react-router-dom';
 import '@blueprintjs/core/lib/css/blueprint.css';
@@ -130,30 +130,38 @@ const Nav = () => {
     { text: 'Nested Item 3', onClick: () => console.log('Nested Item 3 clicked'), to: '/nested-item-3' },
   ];
 
+
   const navigate = useNavigate();
 
+  const [submenuPath, setSubmenuPath] = React.useState('');
+
   const handleItemClick = (to) => {
+    setSubmenuPath(to);
     navigate(to);
   };
 
-  const renderNestedMenu = (nestedItems) => (
+  useEffect(() => {
+    navigate(submenuPath);
+  }, [submenuPath, navigate]);
+
+  const SubMenu = ({ submenu, submenuPath }) => (
     <Menu>
-      {nestedItems.map((item) => (
+      {submenu.map((item) => (
         <MenuItem key={item.text} text={item.text} onClick={() => handleItemClick(item.to)}>
           {item.submenu && item.submenu.length > 0 ? (
-            <SubMenu submenu={item.submenu} />
+            <SubMenu submenu={item.submenu} submenuPath={submenuPath} />
           ) : null}
         </MenuItem>
       ))}
     </Menu>
   );
 
-  const SubMenu = ({ submenu }) => (
+  const renderNestedMenu = (nestedItems, submenuPath) => (
     <Menu>
-      {submenu.map((item) => (
+      {nestedItems.map((item) => (
         <MenuItem key={item.text} text={item.text} onClick={() => handleItemClick(item.to)}>
           {item.submenu && item.submenu.length > 0 ? (
-            <SubMenu submenu={item.submenu} />
+            <SubMenu submenu={item.submenu} submenuPath={submenuPath} />
           ) : null}
         </MenuItem>
       ))}
@@ -161,7 +169,7 @@ const Nav = () => {
   );
 
   const renderButtonWithNestedMenu = (text, icon, submenu, to) => (
-    <Popover content={renderNestedMenu(submenu)} position="bottom">
+    <Popover content={renderNestedMenu(submenu, submenuPath)} position="bottom">
       <Button className={Classes.MINIMAL} style={buttonStyle}>
         <Icon icon={icon} iconSize={16} style={iconStyle} />
         {text}
@@ -170,14 +178,14 @@ const Nav = () => {
   );
 
   const buttonsData = [
-    { text: 'Master', icon: 'home', submenu: masterSubMenu },
-    { text: 'Marketing', icon: 'globe', submenu: marketingSubMenu },
-    { text: 'Transaction', icon: 'credit-card', submenu: transactionSubMenu },
-    { text: 'Account', icon: 'person', submenu: accountSubMenu },
-    { text: 'Support', icon: 'lifesaver', submenu: supportSubMenu },
-    { text: 'Report', icon: 'chart', submenu: reportSubMenu },
-    { text: 'WebApp', icon: 'grid-view', submenu: webappSubMenu },
-    { text: 'Settings', icon: 'cog', submenu: settingSubMenu },
+    { text: 'Master', icon: 'home', submenu: masterSubMenu, to: '/master' },
+    { text: 'Marketing', icon: 'globe', submenu: marketingSubMenu, to: '/marketing' },
+    { text: 'Transaction', icon: 'credit-card', submenu: transactionSubMenu, to: '/transaction' },
+    { text: 'Account', icon: 'person', submenu: accountSubMenu, to: '/account' },
+    { text: 'Support', icon: 'lifesaver', submenu: supportSubMenu, to: '/supprot' },
+    { text: 'Report', icon: 'chart', submenu: reportSubMenu, to: '/report' },
+    { text: 'WebApp', icon: 'grid-view', submenu: webappSubMenu, to: '/webapp' },
+    { text: 'Settings', icon: 'cog', submenu: settingSubMenu, to: '/setting' },
   ];
 
   return (
@@ -188,14 +196,21 @@ const Nav = () => {
       </Navbar.Group>
       <Navbar.Group align={Alignment.RIGHT}>
         <Navbar.Divider style={{ marginRight: '24px' }} />
-        {buttonsData.map((button) => (
-          <Link to={button.to} key={button.text}>
-            {renderButtonWithNestedMenu(button.text, button.icon, button.submenu, button.to)}
-          </Link>
-        ))}
+        {buttonsData.map((button) =>
+          button.submenu && button.submenu.length > 0 ? (
+            renderButtonWithNestedMenu(button.text, button.icon, button.submenu, button.to)
+          ) : (
+            <Link key={button.text} to={button.to}>
+              <Button className={Classes.MINIMAL} style={buttonStyle}>
+                <Icon icon={button.icon} iconSize={16} style={iconStyle} />
+                {button.text}
+              </Button>
+            </Link>
+          )
+        )}
       </Navbar.Group>
     </Navbar>
-    <Home1/>
+    <Home1/>s
     </>
   );
 };
