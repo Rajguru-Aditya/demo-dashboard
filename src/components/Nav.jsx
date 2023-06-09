@@ -3,7 +3,7 @@ import { Navbar, Alignment, Button, Classes, Icon, Popover, Menu, MenuItem } fro
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-// import Home1 from './Home1'
+import Home1 from './Home1'
 
 const Nav = () => {
   const navbarStyle = {
@@ -147,8 +147,8 @@ const Nav = () => {
 
   const SubMenu = ({ submenu, submenuPath }) => (
     <Menu>
-      {submenu.map((item) => (
-        <MenuItem key={item.text} text={item.text} onClick={() => handleItemClick(item.to)}>
+      {submenu.map((item, index) => (
+        <MenuItem key={index} text={item.text} onClick={() => handleItemClick(item.to)}>
           {item.submenu && item.submenu.length > 0 ? (
             <SubMenu submenu={item.submenu} submenuPath={submenuPath} />
           ) : null}
@@ -157,10 +157,11 @@ const Nav = () => {
     </Menu>
   );
   
+  
   const renderNestedMenu = (nestedItems, submenuPath) => (
     <Menu>
-      {nestedItems.map((item) => (
-        <MenuItem key={item.text} text={item.text} onClick={() => handleItemClick(item.to)}>
+      {nestedItems.map((item, index) => (
+        <MenuItem key={index} text={item.text} onClick={() => handleItemClick(item.to)}>
           {item.submenu && item.submenu.length > 0 ? (
             <SubMenu submenu={item.submenu} submenuPath={submenuPath} />
           ) : null}
@@ -168,7 +169,8 @@ const Nav = () => {
       ))}
     </Menu>
   );
-
+  
+  
   const renderButtonWithNestedMenu = (text, icon, submenu, to) => (
     <Popover content={renderNestedMenu(submenu, submenuPath)} position="bottom">
       <Button className={Classes.MINIMAL} style={buttonStyle}>
@@ -177,7 +179,7 @@ const Nav = () => {
       </Button>
     </Popover>
   );
-
+  
 
   const buttonsData = [
     { text: 'Master', icon: 'home', submenu: masterSubMenu, to: '/master' },
@@ -200,26 +202,26 @@ const Nav = () => {
   return (
     <>
     <Navbar fixedToTop className={`${Classes.DARK} ${Classes.SMALL}`} style={navbarStyle}>
-      <Navbar.Group align={Alignment.LEFT}>
-        <Navbar.Heading style={headingStyle}>Dashboard</Navbar.Heading>
-      </Navbar.Group>
-      <Navbar.Group align={Alignment.RIGHT}>
-        <Navbar.Divider style={{ marginRight: '24px' }} />
-        {buttonsData.map((button) =>
-          button.submenu && button.submenu.length > 0 ? (
-            renderButtonWithNestedMenu(button.text, button.icon, button.submenu, button.to)
-          ) : (
-            <Link key={button.text} to={button.to}>
-              <Button className={Classes.MINIMAL} style={buttonStyle}>
-                <Icon icon={button.icon} iconSize={16} style={iconStyle} />
-                {button.text}
-              </Button>
-            </Link>
-          )
-        )}
-      </Navbar.Group>
-    </Navbar>
-    {/* <Home1 /> */}
+        <Navbar.Group align={Alignment.LEFT}>
+          <Navbar.Heading style={headingStyle}>Dashboard</Navbar.Heading>
+        </Navbar.Group>
+        <Navbar.Group align={Alignment.RIGHT}>
+          <Navbar.Divider style={{ marginRight: '24px' }} />
+          {buttonsData.map((button, index) =>
+            button.submenu && button.submenu.length > 0 ? (
+              renderButtonWithNestedMenu(button.text, button.icon, button.submenu, button.to)
+            ) : (
+              <Link key={index} to={button.to}>
+                <Button className={Classes.MINIMAL} style={buttonStyle}>
+                  <Icon icon={button.icon} iconSize={16} style={iconStyle} />
+                  {button.text}
+                </Button>
+              </Link>
+            )
+          )}
+        </Navbar.Group>
+      </Navbar>
+    <Home1 />
     </>
   );
 };
