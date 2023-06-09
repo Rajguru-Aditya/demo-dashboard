@@ -1,0 +1,133 @@
+.product-container {
+    margin: 4px;
+    height: calc(100vh - 8px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+    width: 100%;
+    padding: 2px;
+    background-color: whitesmoke;
+    margin: 4px;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header h1 {
+    font-size: 14px;
+    margin: 0;
+    line-height: 30px;
+    color: rgb(28, 144, 190);
+}
+
+.header-buttons button {
+    margin-left: 10px;
+    height: 20px;
+    padding: 0 10px;
+}
+
+.search-row {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.search-input {
+    flex: 1;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.search-input .bp3-input {
+    height: 100%;
+}
+
+.body {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.product-table-container {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    overflow: auto;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.product-table-container .empty-message {
+    color: #888888;
+    font-style: italic;
+    text-align: center;
+}
+
+.product-table-container .empty-message span {
+    font-weight: bold;
+}
+
+.product-table-container table {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.product-table-container thead {
+    position: sticky;
+    top: 0;
+    background-color: rgb(21, 118, 156);
+    color: white;
+}
+
+.product-table-container thead th:nth-child(3) {
+    background-color: brown;
+    color: white;
+}
+
+.product-table-container tbody {
+    display: block;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.product-table-container tbody td {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.product-table-container tbody td:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.empty-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: yellow;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+  

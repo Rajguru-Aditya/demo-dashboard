@@ -5,6 +5,8 @@ import Login from './components/Login';
 import Home1 from './components/Home1';
 import Product from './pages/master/inventory/Product';
 import Nav from './components/Nav';
+import Subscription from './pages/master/inventory/Subscription';
+import Brand from './pages/master/inventory/Brand';
 
 const App = () => {
 
@@ -17,6 +19,8 @@ const App = () => {
         {/* Master */}
         {/* Inventory */}
         <Route path="/product" element={<Product />} /> 
+        <Route path="/subscription" element={<Subscription />} /> 
+        <Route path="/brand" element={<Brand />} /> 
       </Routes>
     </div>
   );

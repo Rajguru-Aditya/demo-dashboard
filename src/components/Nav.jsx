@@ -3,7 +3,7 @@ import { Navbar, Alignment, Button, Classes, Icon, Popover, Menu, MenuItem } fro
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
-import Home1 from './Home1'
+// import Home1 from './Home1'
 
 const Nav = () => {
   const navbarStyle = {
@@ -39,7 +39,8 @@ const Nav = () => {
       onClick: () => console.log('Nested Item 1 clicked'),
       submenu: [
         { text: 'Product', onClick: () => console.log('Nested Subitem 1 clicked'), to: '/product' },
-        { text: 'Nested Subitem 2', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/nested-subitem-2' },
+        { text: 'Subscription', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/subscription' },
+        { text: 'Brand', onClick: () => console.log('Nested Subitem 2 clicked'), to: '/brand' },
       ],
     },
     { text: 'Nested Item 2', onClick: () => console.log('Nested Item 2 clicked'), to: '/nested-item-2' },
@@ -221,7 +222,7 @@ const Nav = () => {
           )}
         </Navbar.Group>
       </Navbar>
-    <Home1 />
+    {/* <Home1 /> */}
     </>
   );
 };

@@ -1,131 +1,136 @@
 .product-container {
-    margin: 8px;
-    height: 100vh;
-    /* Set the fixed height */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    /* Hide vertical scroll */
+  margin: 8px;
+  height: 100vh;
+  /* Set the fixed height */
+  display: flex;
+  flex-direction: column;
 }
 
-
 .form-container {
-    width: 100%;
-    padding: 1px;
-    background-color: whitesmoke;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 4px;
-    flex-grow: 1;
-    /* Expand to fill the available vertical space */
-    overflow: auto;
-    /* Add vertical scroll if necessary */
+  width: 100%;
+  padding: 1px;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 4px;
+  flex-grow: 1;
+  /* Expand to fill the available vertical space */
+  overflow: auto;
+  /* Add vertical scroll if necessary */
 }
 
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    height: 18px;
-    margin-top: 0;
-    margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .header h1 {
-    font-size: 14px;
-    margin: 0;
-    line-height: 30px;
+  font-size: 14px;
+  margin: 0;
+  line-height: 30px;
 }
 
 .header-buttons button {
-    margin-left: 10px;
-    height: 15px;
-    padding: 0 10px;
+  margin-left: 10px;
+  height: 15px;
+  padding: 0 10px;
 }
 
 .search-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 4px;
-    height: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  height: 25px;
 }
 
 .search-input {
-    flex: 1;
-    margin-right: 4px;
-    margin-left: 4px;
+  flex: 1;
+  margin-right: 4px;
+  margin-left: 4px;
 }
 
 .search-input .bp3-input {
-    height: 40px;
+  height: 40px;
 }
 
+
 .body {
-    margin-bottom: 20px;
-    flex-grow: 1;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  /* Add vertical scroll if necessary */
+  overflow-y: auto;
 }
 
 .product-table {
-    width: 100%;
+  width: 100%;
 }
 
 .product-table thead th {
-    background-color: rgb(21, 118, 156);
-    color: white;
+  background-color: rgb(21, 118, 156);
+  color: white;
 }
 
 .product-table thead th:nth-child(7) {
-    background-color: brown;
-    color: white;
+  background-color: brown;
+  color: white;
 }
 
 .product-table tbody tr:first-child td {
-    background-color: brown;
+  background-color: brown;
 }
 
 .product-table tbody {
-    height: 50px;
+  /* Set the height to enable scrolling */
+  max-height: 400px; /* Adjust the value as needed */
+  overflow-y: auto;
 }
 
 .product-table tbody td {
-    height: 50px;
-    vertical-align: middle;
+  height: 50px;
+  vertical-align: middle;
 }
 
+/* Rest of the CSS code... */
+
+
 h4.prodName {
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: #2884d4;
-    color: white;
-    font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #2884d4;
+  color: white;
+  font-weight: bold;
 }
 
 .form-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .body {
-    flex-grow: 1;
-    margin-bottom: 0;
+  flex-grow: 1;
+  margin-bottom: 0;
 }
 
 .footer {
-    display: flex;
-    align-items: flex-start;
-    margin-top: auto;
-    /* Moves the footer to the bottom */
+  display: flex;
+  align-items: flex-start;
+  margin-top: auto;
+  /* Moves the footer to the bottom */
 }
 
 .footer-table-container {
-    flex: 1 1 0;
-    margin-right: 4px;
+  flex: 1 1 0;
+  margin-right: 4px;
 }
 
 .footer-table-container:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .other-detail-table tbody tr,
@@ -137,6 +142,6 @@ h4.prodName {
 .product-table tbody tr,
 .product-table tbody td,
 .product-table thead th {
-    height: 6px;
-    padding: 0;
+  height: 6px;
+  padding: 0;
 }

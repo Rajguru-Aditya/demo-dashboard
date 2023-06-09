@@ -4,6 +4,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+{
+    product: 'MARG ERP SILVER',
+    brand: 'Brand 1',
+  },
+  {
+    product: 'EXTRA COMPANY',
+    brand: 'Brand 1',
+  },
+  {
+    product: 'Barcode Implementation',
+    brand: 'Brand 1',
+  },
+  {
+    product: 'Product 1',
+    brand: 'Brand 1',
+  },
+
 In the project directory, you can run:
 
 ### `npm start`
