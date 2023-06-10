@@ -1,147 +1,147 @@
 .product-container {
-    margin: 4px;
-    height: calc(100vh - 8px);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .form-container {
-    width: 100%;
-    padding: 2px;
-    background-color: whitesmoke;
-    margin: 4px;
-    flex-grow: 1;
-    overflow: auto;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    height: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  
-  .header h1 {
-    font-size: 14px;
-    margin: 0;
-    line-height: 30px;
-  }
-  
-  .header-buttons button {
-    margin-left: 10px;
-    height: 20px;
-    padding: 0 10px;
-  }
-  
-  .search-row {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-  
-  .search-input {
-    flex: 1;
-    margin-right: 4px;
-    margin-left: 4px;
-  }
-  
-  .search-input .bp3-input {
-    height: 100%;
-  }
-  
-  .body {
-    margin-bottom: 20px;
-    flex-grow: 1;
-    overflow: auto;
-  }
-  
-  .product-table {
-    width: 100%;
-    margin-top: 0;
-  }
-  
-  .product-table thead th {
-    position: sticky;
-    top: 0;
-    background-color: rgb(21, 118, 156);
-    color: white;
-    line-height: 6px;
-  }
-  
-  .product-table tbody tr td {
-      padding: 0;
-  }
-  
-  .product-table thead th:nth-child(7) {
-    background-color: brown;
-    color: white;
-  }
-  
-  .product-table tbody tr:first-child td {
-    background-color: brown;
-  }
-  
-  .product-table tbody {
-    display: contents;
-    max-height: 200px;
-    overflow-y: auto;
-  }
-  
-  .product-table tbody td {
-    height: 40px;
-    vertical-align: middle;
-  }
-  
-  h4.prodName {
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: #2884d4;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .body {
-    flex-grow: 1;
-    margin-bottom: 0;
-  }
-  
-  .footer {
-    display: flex;
-    align-items: flex-start;
-    margin-top: auto;
-  }
-  
-  .footer-table-container {
-    flex: 1 1 0;
-    margin-right: 4px;
-  }
-  
-  .footer-table-container:last-child {
-    margin-right: 0;
-  }
-  
-  .other-detail-table tbody tr,
-  .price-detail-table tbody tr,
-  .tax-detail-table tbody tr,
-  .other-detail-table tbody td,
-  .price-detail-table tbody td,
-  .tax-detail-table tbody td,
-  .product-table tbody tr,
-  .product-table tbody td{
-    height: 6px;
-    padding: 0;
-  }
-  
+  margin: 4px;
+  padding-top: 30px;
+  height: calc(100vh - 8px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+  width: 100%;
+  padding: 2px;
+  background-color: whitesmoke;
+  margin: 4px;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header h1 {
+  font-size: 14px;
+  margin: 0;
+  line-height: 30px;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+  height: 20px;
+  padding: 0 10px;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.search-input {
+  flex: 1;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.search-input .bp3-input {
+  height: 100%;
+}
+
+.body {
+  margin-bottom: 20px;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.product-table {
+  width: 100%;
+  margin-top: 0;
+}
+
+.product-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: rgb(21, 118, 156);
+  color: white;
+  line-height: 6px;
+}
+
+.product-table tbody tr td {
+  padding: 0;
+}
+
+.product-table thead th:nth-child(7) {
+  background-color: brown;
+  color: white;
+}
+
+.product-table tbody tr:first-child td {
+  background-color: brown;
+}
+
+.product-table tbody {
+  display: contents;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.product-table tbody td {
+  height: 40px;
+  vertical-align: middle;
+}
+
+h4.prodName {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #2884d4;
+  color: white;
+  font-weight: bold;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.body {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  margin-top: auto;
+}
+
+.footer-table-container {
+  flex: 1 1 0;
+  margin-right: 4px;
+}
+
+.footer-table-container:last-child {
+  margin-right: 0;
+}
+
+.other-detail-table tbody tr,
+.price-detail-table tbody tr,
+.tax-detail-table tbody tr,
+.other-detail-table tbody td,
+.price-detail-table tbody td,
+.tax-detail-table tbody td,
+.product-table tbody tr,
+.product-table tbody td {
+  height: 6px;
+  padding: 0;
+}
